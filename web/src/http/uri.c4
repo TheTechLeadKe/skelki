@@ -1,0 +1,22 @@
+
+
+struct UserInfo:
+    str name
+    str password
+:
+
+struct Authority:
+    UserInfo userInfo
+    str host
+    str port
+    bool hasPort
+:
+
+
+struct URI:
+    str scheme
+    Authority authority
+    str query
+    str fragment
+:
+

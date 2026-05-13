@@ -1,0 +1,18 @@
+
+
+foreign "C":
+    fn rand()->i32
+
+    fn srand(u32 seed)->void
+:
+
+fn Rand()->i32:
+    return rand()
+:
+
+
+fn Srand(u32 seed)->void:
+    return srand(seed)
+:
+
+

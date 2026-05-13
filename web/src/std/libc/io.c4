@@ -1,0 +1,152 @@
+foreign "C":
+    fn printf(char *fmt,...)->i32
+
+    fn fprintf(FILE *file,char *fmt,...)->i32
+
+    fn sprintf(char *buf,char *fmt,...)->i32
+
+    fn snprintf(char *buf,usize n,char *fmt,...)->i32
+
+    fn scanf(char *fmt,...)->i32
+
+    fn fscanf(FILE *file,char *fmt,...)->i32
+
+    fn sscanf(char *buf,char *fmt,...)->i32
+
+    fn puts(char *str)->i32
+
+    fn fputs(char *str,FILE *file)->i32
+
+    fn getchar()->i32
+
+    fn putchar(i32 ch)->i32
+
+    fn fgets(char *buf,i32 n,FILE *file)->char *
+
+    fn fgetc(FILE *file)->i32
+
+    fn fputc(i32 ch,FILE *file)->i32
+
+    fn fopen(char *path,char *mode)->FILE *
+
+    fn fclose(FILE *file)->i32
+
+    fn fread(void *ptr,usize size,usize count,FILE *file)->usize
+
+    fn fwrite(void *ptr,usize size,usize count,FILE *file)->usize
+
+    fn fflush(FILE *file)->i32
+
+    fn fseek(FILE *file,i64 offset,i32 origin)->i32
+
+    fn ftell(FILE *file)->i64
+
+    fn rewind(FILE *file)
+
+    fn remove(char *path)->i32
+
+    fn rename(char *old,char *new)->i32
+
+    fn perror(char *str)
+:
+
+
+fn Printf(char *fmt,...)->i32:
+    return printf(fmt,...)
+:
+
+fn Fprintf(FILE *file,char *fmt,...)->i32:
+    return fprintf(file,fmt,...)
+:
+
+fn Sprintf(char *buf,char *fmt,...)->i32:
+    return sprintf(buf,fmt,...)
+:
+
+fn Snprintf(char *buf,usize n,char *fmt,...)->i32:
+    return snprintf(buf,n,fmt,...)
+:
+
+fn Scanf(char *fmt,...)->i32:
+    return scanf(fmt,...)
+:
+
+fn Fscanf(FILE *file,char *fmt,...)->i32:
+    return fscanf(file,fmt,...)
+:
+
+fn Sscanf(char *buf,char *fmt,...)->i32:
+    return sscanf(buf,fmt,...)
+:
+
+fn Puts(char *str)->i32:
+    return puts(str)
+:
+
+fn Fputs(char *str,FILE *file)->i32:
+    return fputs(str,file)
+:
+
+fn Getchar()->i32:
+    return getchar()
+:
+
+fn Putchar(i32 ch)->i32:
+    return putchar(ch)
+:
+
+fn Fgets(char *buf,i32 n,FILE *file)->char *:
+    return fgets(buf,n,file)
+:
+
+fn Fgetc(FILE *file)->i32:
+    return fgetc(file)
+:
+
+fn Fputc(i32 ch,FILE *file)->i32:
+    return fputc(ch,file)
+:
+
+fn Fopen(char *path,char *mode)->FILE *:
+    return fopen(path,mode)
+:
+
+fn Fclose(FILE *file)->i32:
+    return fclose(file)
+:
+
+fn Fread(void *ptr,usize size,usize count,FILE *file)->usize:
+    return fread(ptr,size,count,file)
+:
+
+fn Fwrite(void *ptr,usize size,usize count,FILE *file)->usize:
+    return fwrite(ptr,size,count,file)
+:
+
+fn Fflush(FILE *file)->i32:
+    return fflush(file)
+:
+
+fn Fseek(FILE *file,i64 offset,i32 origin)->i32:
+    return fseek(file,offset,origin)
+:
+
+fn Ftell(FILE *file)->i64:
+    return ftell(file)
+:
+
+fn Rewind(FILE *file):
+    rewind(file)
+:
+
+fn Remove(char *path)->i32:
+    return remove(path)
+:
+
+fn Rename(char *old,char *new)->i32:
+    return rename(old,new)
+:
+
+fn Perror(char *str):
+    perror(str)
+:

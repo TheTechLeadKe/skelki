@@ -1,0 +1,70 @@
+
+
+foreign "C":
+    fn memcpy(void *dst,void *src,usize n)->void *
+
+    fn memmove(void *dst,void *src,usize n)->void *
+
+    fn memset(void *ptr,i32 value,usize n)->void *
+
+    fn memcmp(void *a,void *b,usize n)->i32
+
+    fn memchr(void *ptr,i32 value,usize n)->void *
+
+    fn malloc(usize size)->void *
+
+    fn calloc(usize count,usize size)->void *
+
+    fn realloc(void *ptr,usize size)->void *
+
+    fn free(void *ptr)
+:
+
+
+
+
+fn Memcpy(void *dst,void *src,usize n)->void *:
+    return memcpy(dst,src,n)
+:
+
+
+
+fn Memmove(void *dst,void *src,usize n)->void *:
+    return memmove(dst,src,n)
+:
+
+
+fn Memset(void *ptr,i32 value,usize n)->void *:
+    return memset(ptr,value,n)
+:
+
+
+fn Memcmp(void *a,void *b,usize n)->i32:
+    return memcmp(a,b,n)
+:
+
+
+
+fn Memchr(void *ptr,i32 value,usize n)->void *:
+    return memchr(ptr,value,n)
+:
+
+fn Malloc(usize size)->void *:
+    return malloc(size)
+:
+
+
+
+fn Calloc(usize count,usize size)->void *:
+    return calloc(count,size)
+:
+
+
+fn Realloc(void *ptr,usize size)->void *:
+    return realloc(ptr,size)
+:
+
+
+fn Free(void *ptr):
+    return free(ptr)
+:

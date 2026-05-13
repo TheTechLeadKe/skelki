@@ -1,0 +1,53 @@
+foreign "C":
+    fn atoi(char *string)->i32
+
+    fn atol(char *string)->i64
+
+    fn atof(char *string)->f64
+
+    fn strtol(char *string,char **end,i32 base)->i64
+
+    fn strtoul(char *string,char **end,i32 base)->u64
+
+    fn strtof(char *string,char **end)->f32
+
+    fn strtod(char *string,char **end)->f64
+:
+
+
+fn Atoi(char *string)->i32:
+    return atoi(string)
+:
+
+
+fn Atol(char *string)->i64:
+    return atol(string)
+:
+
+
+fn Atof(char *string)->f64:
+    return atof(string)
+:
+
+
+fn Strtol(char *string,char **end,i32 base)->i64:
+    return strtol(string,end,base)
+:
+
+
+
+fn Strtoul(char *string,char **end,i32 base)->u64:
+    retutn strtoul(string,end,base)
+:
+
+
+fn Strtof(char *string,char **end)->f32:
+    return strtof(string,end)
+:
+
+
+
+fn Strtod(char *string,char **end)->f64:
+    return strtod(string,end)
+:
+

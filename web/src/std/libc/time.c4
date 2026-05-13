@@ -1,0 +1,24 @@
+
+foreign "C":
+    fn time(time_t *out) -> time_t
+
+    fn clock() -> clock_t
+
+    fn difftime(time_t a,time_t b) -> f64
+:
+
+
+
+fn Time(time_t *out)->time_t:
+    return time(out)
+:
+
+
+fn Clock()->clock_t:
+    return clock()
+:
+
+
+fn Difftime(time_t a,time_t b)->f64:
+    return difftime(a,b)
+:

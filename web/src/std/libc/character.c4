@@ -1,0 +1,56 @@
+foreign "C":
+    fn isalnum(i32 ch)->i32
+
+    fn isalpha(i32 ch)->i32
+
+    fn isdigit(i32 ch)->i32
+
+    fn islower(i32 ch)->i32
+
+    fn isupper(i32 ch)->i32
+
+    fn isspace(i32 ch)->i32
+
+    fn isxdigit(i32 ch)->i32
+
+    fn tolower(i32 ch)->i32
+
+    fn toupper(i32 ch)->i32
+:
+
+
+fn Isalnum(i32 ch)->i32:
+    return isalnum(ch)
+:
+
+fn Isalpha(i32 ch)->i32:
+    return isalpha(ch)
+:
+
+fn Isdigit(i32 ch)->i32:
+    return isdigit(ch)
+:
+
+fn Islower(i32 ch)->i32:
+    return islower(ch)
+:
+
+fn Isupper(i32 ch)->i32:
+    return isupper(ch)
+:
+
+fn Isspace(i32 ch)->i32:
+    return isspace(ch)
+:
+
+fn Isxdigit(i32 ch)->i32:
+    return isxdigit(ch)
+:
+
+fn Tolower(i32 ch)->i32:
+    return tolower(ch)
+:
+
+fn Toupper(i32 ch)->i32:
+    return toupper(ch)
+:

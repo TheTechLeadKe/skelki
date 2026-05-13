@@ -1,0 +1,78 @@
+
+foreign "C":
+    fn strlen(char *string)->usize
+
+    fn strcpy(char *dst,char *src)->char *
+
+    fn strncpy(char *dst,char *src,usize n)->char *
+
+    fn strcat(char *dst,char *src)->char *
+
+    fn strncat(char *dst,char *src,usize n)->char *
+
+    fn strcmp(char *a,char *b)->i32
+
+    fn strncmp(char *a,char *b,usize n)->i32
+
+    fn strchr(char *string,i32 ch)->char *
+
+    fn strrchr(char *string,i32 ch)->char *
+
+    fn strstr(char *haystack,char *needle)->char *
+
+    fn strerror(i32 err)->char *
+:
+
+
+fn Strlen(char *string)->usize:
+    return strlen(string)
+:
+
+
+fn Strcpy(char *dst,char *src)->char *:
+    return strcpy(dst,src)
+:
+
+fn Strncpy(char *dst,char *src,usize n)->char *:
+    return strncpy(dst,src,n)
+:
+
+
+fn Strcat(char *dst,char *src)->char *:
+    return strcat(dst,src)
+:
+
+fn Strncat(char *dst,char *src,usize n)->char *:
+    return strncat(dst,src,n)
+:
+
+fn Strcmp(char *a,char *b)->i32:
+    return strcmp(a,b)
+:
+
+
+fn Strncmp(char *a,char *b,usize n)->i32:
+    return strncmp(a,b,n)
+:
+
+
+fn Strchr(char *string,i32 ch)->char *:
+    return strchr(string,ch)
+:
+
+
+fn Strrchr(char *string,i32 ch)->char *:
+    return strrchr(string,ch)
+:
+
+
+fn Strstr(char *haystack,char *needle)->char *:
+    return strstr(haystack,needle)
+:
+
+
+fn Strerror(i32 err)->char *:
+    return strerror(err)
+:
+
+
