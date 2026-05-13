@@ -1,0 +1,7 @@
+
+use std::libc::io as io
+
+pub fn main()->i32:
+    io::puts("beginnings of a special purpose fuzzing web browser")
+    return 0
+:
